@@ -20,16 +20,6 @@
 |------"--------------------------------------"-------|
 `-----------------------------------------------------'
 
-        Grupo :
-
-        * Kin Torres de Prado Mello
-        * Thiago Brand„o
-        * Thiago Marinho
-        * Jeovane da Costa
-        * Renato
-        * Maia ValenÁa
-        * Lucas
-
 */
 
 
@@ -60,7 +50,7 @@ typedef struct aviao{
     struct aviao *esq, *dir, *pai;
 }AVIAO;
 
-/*------------------------------------ FUN«’ES ------------------------------------*/
+/*------------------------------------ FUN√á√ïES ------------------------------------*/
 
 void freebuffer(){
     if(OS)
@@ -186,7 +176,7 @@ void troca_reserva(RESERVA *dir,RESERVA *esq){
 }
 
 void quick_reserva(RESERVA* esq,RESERVA* dir){
-	char pivo[51];//para a comparaÁ„o
+	char pivo[51];//para a compara√ß√£o
 	strcpy(pivo, esq->nome);
 	RESERVA* inicio = esq;
 	RESERVA* fim = dir;
@@ -206,17 +196,17 @@ void quick_reserva(RESERVA* esq,RESERVA* dir){
 			troca_reserva(esq, dir);
 		}
 	} while (cruzou == 0);
-	// troca pivÙ
+	// troca piv√¥
 	if(inicio != dir)
 		troca_reserva(inicio, dir);
-	//chama pros lados do pivÙ(dir)
+	//chama pros lados do piv√¥(dir)
 	if(inicio != dir)
 		quick_reserva(inicio, dir->ant);
 	if(dir != fim)
 		quick_reserva(dir->prox, fim);
 }
 
-RESERVA *dir_list_reserva(RESERVA *res){//localizar o endereÁo do ultimo elemento a direita da lista reservas do aviao
+RESERVA *dir_list_reserva(RESERVA *res){//localizar o endere√ßo do ultimo elemento a direita da lista reservas do aviao
     while (res->prox != NULL && res != NULL){
         res = res->prox;
     }
@@ -411,7 +401,7 @@ void creditos (){
      pause();
 }
 
-/*--------------------------------- FUN«√O PRINCIPAL ---------------------------------*/
+/*--------------------------------- FUN√á√ÉO PRINCIPAL ---------------------------------*/
 
 
 int main()
@@ -440,7 +430,7 @@ int main()
 
         switch(opcao)
         {
-            case '1':                               //cadastra os aviıes
+            case '1':                               //cadastra os avi√µes
 
                 printf("DIGITE O NUMERO DO AVIAO: ");
                 scanf("%d", &i);
@@ -553,7 +543,7 @@ int main()
 
                 break;
 
-            default:                                //n„o faz nada
+            default:                                //n√£o faz nada
 
                 printf("\n\nOPCAO INVALIDA!\n\n\n\n");
                 pause();
@@ -568,7 +558,7 @@ int main()
     }while(opcao != '0');
 
 
-/*------------------------------------ CR…DITOS ------------------------------------*/
+/*------------------------------------ CR√âDITOS ------------------------------------*/
 
 
 creditos();
